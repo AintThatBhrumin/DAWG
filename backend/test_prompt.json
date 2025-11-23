@@ -1,0 +1,9 @@
+{
+  "model": "qwen/qwen3-vl-4b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Extract invoice number from this text ONLY as JSON: {\"invoice_number\": \"...\"}\n\nInvoice text:\nInvoice Number :IN-1190"
+    }
+  ]
+}

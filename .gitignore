@@ -1,0 +1,50 @@
+# ---------------------------
+# PYTHON / FASTAPI BACKEND
+# ---------------------------
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# SQLite DB (if used)
+*.db
+
+# Pytest
+.cache/
+
+# IDE Stuff
+.vscode/
+.idea/
+
+# ---------------------------
+# REACT FRONTEND
+# ---------------------------
+node_modules/
+dist/
+build/
+
+# Local dev env
+*.local
+
+# Env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# macOS system files
+.DS_Store
