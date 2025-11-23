@@ -9,66 +9,55 @@
 
 🐾 DAWG — AI Invoice Extractor
 FastAPI + PostgreSQL + React + Tailwind + Qwen-VL (LM Studio)
-
 DAWG is a fully offline, industry-ready AI-powered Invoice Extraction System designed to convert PDFs, images, or raw text into structured invoice data with high accuracy.
-
 It features a modern React UI, FastAPI backend, PostgreSQL database, and an LLM running locally via LM Studio.
+
+
 
 📦 Features
 🔍 AI Invoice Parsing
 Extracts:
-
 Invoice Number
-
 Date
-
 Vendor Name
-
 Buyer Name
-
 GST Number
-
 Subtotal, Tax, Total
-
 Currency
-
 Line Items with quantity, unit price, total price
+
+
 
 📎 Input Formats
 PDF
-
 Images (JPG / PNG)
-
 Raw text
 
 🤖 AI Engine
 Uses Qwen-VL 4B or any LM Studio model
-
 Fully offline
-
 Custom extraction prompts
-
 JSON only output
+
+
 
 🗄️ Database
 PostgreSQL with SQLAlchemy ORM
-
 Invoice + Items tables
-
 Auto-create tables on startup
+
+
+
 
 🎨 Frontend
 React 18 + Vite
-
 Tailwind CSS
-
 File upload
-
 Pretty invoice table
-
 Expandable JSON viewer
-
 Copy to clipboard
+
+
 
 📁 Project Structure
 dawg/
@@ -112,7 +101,6 @@ psql -U postgres -c "CREATE DATABASE dawg;"
 5️⃣ Run backend
 uvicorn main:app --reload
 
-
 Backend:
 👉 http://127.0.0.1:8000
 
@@ -152,22 +140,17 @@ npm run build
 Ask me and I’ll generate a full docker-compose production setup.
 
 
+
+
 🗺️ Roadmap (Upcoming Features)
 
  Authentication (JWT)
-
  Invoice history dashboard
-
  Editable extracted fields
-
  Multi-model fallback (Qwen → GPT → Claude)
-
  Auto-detect invoice language
-
  Role-based access
-
  Cloud deployment templates (Render / Railway / Vercel)
-
 
 🤝 Contributing
 Pull requests are welcome!
