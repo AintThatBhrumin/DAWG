@@ -1,22 +1,21 @@
 🐾 DAWG — AI Invoice Extractor
+FastAPI • React • PostgreSQL • Tailwind • LM Studio (Qwen-VL / Any Local LLM)
 
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-20232a?logo=react&logoColor=61DAFB)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+🚀 Overview
 
-FastAPI + PostgreSQL + React + Tailwind + Qwen-VL (LM Studio)
+DAWG is an offline, industry-ready AI Invoice Extraction System built using:
 
-DAWG is a fully offline, industry-ready AI-powered Invoice Extraction System designed to convert PDFs, images, or raw text into structured invoice data with high accuracy.
+FastAPI backend
 
-It features a modern React UI, FastAPI backend, PostgreSQL database, and an LLM running locally via LM Studio.
+React + Tailwind frontend
 
+PostgreSQL database
 
+LM Studio (Qwen-VL / any LLM) for local, private invoice parsing
 
-📦 Features
+DAWG converts PDFs, images, or raw text into clean structured JSON, ready for accounting, GST billing, automation, or ERP integration.
 
+⭐ Features
 🔍 AI Invoice Parsing
 
 Extracts:
@@ -31,44 +30,43 @@ Buyer Name
 
 GST Number
 
-Subtotal, Tax, Total
-
 Currency
 
-Line Items with quantity, unit price, total price
+Subtotal
 
+Tax
 
+Total
 
-📎 Input Formats
+Line Items (name, qty, unit price, total price)
+
+📎 Supported Input Formats
 
 PDF
 
-Images (JPG / PNG)
+JPG / PNG images
 
 Raw text
 
+🤖 AI Engine (Offline)
 
-🤖 AI Engine
+Uses LM Studio
 
-Uses Qwen-VL 4B or any LM Studio model
+Works with Qwen-VL, LLaMA, Phi, Gemma, etc.
 
-Fully offline
+No internet required
 
-Custom extraction prompts
-
-JSON only output
-
-
+Strict JSON output
 
 🗄️ Database
 
-PostgreSQL with SQLAlchemy ORM
+PostgreSQL
+
+SQLAlchemy ORM
 
 Invoice + Items tables
 
-Auto-create tables on startup
-
-
+Auto-creates tables on startup
 
 🎨 Frontend
 
@@ -76,19 +74,15 @@ React 18 + Vite
 
 Tailwind CSS
 
-File upload
+PDF/Image upload
 
-Pretty invoice table
+JSON Pretty Viewer
 
-Expandable JSON viewer
+Copy to Clipboard
 
-Copy to clipboard
-
-
-
+Fully responsive
 
 📁 Project Structure
-
 dawg/
 │── backend/
 │   ├── ai_extractor.py
@@ -108,110 +102,78 @@ dawg/
 │
 └── README.md
 
-
-
-
 ⚙️ Backend Setup
-
 1️⃣ Create virtual environment
-
 cd backend
-
 python -m venv venv
-
-venv\Scripts\activate
-
+venv/Scripts/activate
 
 2️⃣ Install dependencies
-
 pip install -r requirements.txt
 
-
 3️⃣ Create .env
-
 DATABASE_URL=postgresql+psycopg2://postgres:password@localhost:5432/dawg
-
 LMSTUDIO_CHAT_URL=http://127.0.0.1:1234/v1/chat/completions
 
-
 4️⃣ Create PostgreSQL database
-
 psql -U postgres -c "CREATE DATABASE dawg;"
 
 5️⃣ Run backend
-
 uvicorn main:app --reload
 
-Backend:
 
+Backend:
 👉 http://127.0.0.1:8000
 
-
-
-
 🎨 Frontend Setup
-
-1️⃣ Install Node modules
-
+1️⃣ Install dependencies
 cd frontend
-
 npm install
 
-
-2️⃣ Create .env in frontend/
-
+2️⃣ Create .env
 VITE_API_BASE_URL=http://localhost:8000
 
-
 3️⃣ Run frontend
-
 npm run dev
 
 
 Frontend:
-
 👉 http://localhost:5173
 
-
-🧪 Testing the API
-
-Windows cURL:
-
+🧪 Test API (Windows cURL)
 curl.exe -X POST "http://127.0.0.1:8000/invoices/extract" ^
   -H "accept: application/json" ^
   -F "file=@C:/Users/YourName/Downloads/invoice.pdf;type=application/pdf"
 
-
 🚀 Production Build
-
-Build frontend:
-
+Build frontend
 npm run build
 
+Need Full Docker Setup?
 
-(Optional) Docker support
-
-Ask me and I’ll generate a full docker-compose production setup.
-
-
-
+Ask anytime — I will generate a complete docker-compose.yml to deploy DAWG on a server.
 
 🗺️ Roadmap (Upcoming Features)
 
- Authentication (JWT)
- 
- Invoice history dashboard
- 
- Editable extracted fields
- 
- Multi-model fallback (Qwen → GPT → Claude)
- 
- Auto-detect invoice language
- 
- Role-based access
- 
- Cloud deployment templates (Render / Railway / Vercel)
+🔐 Authentication (JWT)
 
+📊 Invoice history dashboard
+
+✏️ Editable extracted fields
+
+🔁 Multi-model fallback (Qwen → GPT → Claude)
+
+🌐 Auto-detect invoice language
+
+👤 Role-based access
+
+☁️ Deployment templates (Render / Railway / Vercel)
 
 🤝 Contributing
-Pull requests are welcome!
+
+Pull requests are welcome.
+Please open an issue before submitting major changes.
+
+📜 License
+
+MIT License © 2025 Bhrumin Madhu
